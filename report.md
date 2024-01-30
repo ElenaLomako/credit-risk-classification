@@ -10,9 +10,9 @@ In this section, describe the analysis you completed for the machine learning mo
 * Describe the stages of the machine learning process you went through as part of this analysis.
 * Briefly touch on any methods you used (e.g., `LogisticRegression`, or any resampling method).
 
-The purpose of the analysis is to buld a classification model utilizing logistic regression algirothm in order to predict high and low risk lenders. The model was trained on the hostorical data which contains the information on loan size, interest rate, debt, borrower income, account, deragotory marks on credit. Also, the data contaons "loan_status" with a binary classsifier, where 1 is for hish risk and 0 is for low risk lenders. To check the count of each category of loan status we used "value_counts" function. The data contaons 97% of low risk loans and 3% of high risk.
+The purpose of the analysis is to build a classification model utilizing logistic regression algirothm in order to predict high and low risk lenders. The model was trained on the hostorical data, which contains the information on loan size, interest rate, debt, borrower income, account, deragotory marks on credit. Also, the data contaons "loan_status" with a binary classsifier, where 1 is for hish risk and 0 is for low risk lenders. To check the count of each category of loan status we used "value_counts" function. The data contains 97% of low risk loans and 3% of high risk.
 
-In our analysis we used classification algorithm. Firstly, we split the data into training and testing sets using "train_test_split". Then we created a logistic regression model with unsampled and sampled data. In both cases, logistic regression algorithm was trained on sampled and not sampled datasets. Then the model was validated and assest using the folowing metrics: accuracy, precision, recall, and F1 score.
+In our analysis we used classification algorithm. Firstly, we split the data into training and testing sets using "train_test_split". Then we created a logistic regression model with unsampled and sampled data. A logistic regression algorithm was trained on sampled (model 1)and not sampled (model 2) datasets. Then each model was validated and assest using the folowing metrics: accuracy, precision, recall, and F1 score.
 
 ## Results
 
@@ -43,7 +43,7 @@ Summarize the results of the machine learning models, and include a recommendati
 
 Both models provide with high classification power. Random oversampling algorithm has slight improvement in classification prediction yeilding more favorable results based on 99% balanced accuracy score vs 95% with the original data. Futhermore, with random oversampling algorithm we achieved improved recall and f1 indicators of the model overall by improving these metrics for high-risk-loans to 0.99 (vs 0.91 using the original data) and 0.92 (vs 0.88 using original data) respectively. However, there is a slight decrease in the precision for high-risk loans to 0.85 (vs 0.86 using the original data), which likely is aceptable given the increase in the recall, f-1 score, and weighted avr precision. 
 
-The overall assestment of the model definetly depends on the problem we are trying to solve. However, I believe in our case, where a bank is trying to access the creditworthiness of borrowers, missidentifying high-risk borrowes is more risky than identifying low-risk borrowers to mitigate lending risk, and as lower the result default rate on the lons the banks issues. 
+The overall assestment of the model definitely depends on the problem we are trying to solve. However, I believe in our case, where a bank is trying to access the creditworthiness of borrowers, missidentifying high-risk borrowes is more risky than identifying low-risk borrowers to mitigate lending risk, and as lower the result default rate on the lons the banks issues. 
 
 While both models present impresive results, I belive the random oversampling algorithm has impoved classification prediction yeilding better results.
 
